@@ -15,7 +15,8 @@ const PlaceSchema = new mongoose.Schema({
             type: [Number],
             index: '2dsphere'
         },
-        formattedAddress: String
+        formattedAddress: String,
+        city: String
     },
     createdAt: {
         type: Date,
@@ -29,6 +30,7 @@ PlaceSchema.pre('save', async function(next) {
     this.location = {
         type: 'Point',
         coordinates: [loc[0].longitude, loc[0].latitude],
+        city: loc[0].city,
         formattedAddress: loc[0].formattedAddress
     };
 
