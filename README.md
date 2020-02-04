@@ -1,6 +1,6 @@
-# visited-places-api
+# Visited Places
 
-User generated map of visited places. Where have you been to?
+## User generated map of visited places. Where have you been to?
 
 Full-stack app made with:
 
